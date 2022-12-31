@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap'); 
+*{
+    margin: 0;padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+:root{
+    --font:'Karla', sans-serif;
+
+}
+html{
+    font-size: 62.5%;
+}
+h1{
+    font-weight: 700;
+    color: white;
+    font-size: 3rem;
+    font-family: var(--font);
+    margin: 2rem 0;
+}
+h2{
+    font-size: 2rem;
+    color: hsl(71, 73%, 54%);
+}
+p{
+    font-size: 1.6rem;
+    margin: 2rem 0;
+    color: hsl(218, 22%, 67%);
+}
+b{
+    font-size: 4rem;
+}
+span{
+    vertical-align: super;
+    margin-left: 1rem;
+    
+}
+
+.main{
+    margin: 5rem 10rem;
+    box-shadow: 0 0 10px hsl(240, 3%, 6%);
+    border-radius: 1rem;
+}
+.grid-box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: 'a a' 'b c';
+    grid-template-rows: 1fr 1.2fr;
+    
+}
+.box1{
+grid-area: a;
+
+}
+.box1 h1{
+    color: hsl(179, 62%, 43%);
+}
+.box2{
+    grid-area: b;
+    background-color: hsl(179, 62%, 43%);
+    border-radius: 0 0 0 1rem;
+}
+.box2 p,.box3 p{
+    color: hsl(204, 43%, 93%);
+    vertical-align: auto;
+}
+.box3{
+    grid-area: c;
+    border-radius: 0 0 1rem 0;
+background-color: hsl(179, 57%, 51%);
+}
+.content{
+    padding: 2rem 7rem;
+}
+.btn{
+    width: 100%;
+    padding: 1rem;
+    border:none;
+    border-radius: .5rem;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    transition: all 1s;
+    margin-bottom: 2rem;
+}
+.btn:hover{
+box-shadow: 0 0 7px rgb(24, 23, 23);
+color: black;
+background-color: hsl(71, 83%, 50%);
+}
+
+
+
+
+/* Media queries  */
+
+
+
+@media screen and (max-width:800px) {
+    html{
+        font-size: 55%;
+    }
+    .grid-box{
+        grid-template-rows: repeat(3,1fr);
+        grid-template-areas: 'a a' 'b b' 'c c';
+    }
+    .box1{
+        grid-area: a;
+    }
+    .box2{
+        grid-area: b;
+        border-radius: 0;
+    }
+    .box3{
+        grid-area: c;
+        border-radius: 0 0 1rem 1rem;
+    }
+}
+
+
+
+
+
+@media screen and (max-width:600px) {
+    
+    html{
+        font-size: 40%;
+    }
+    .btn{
+        font-size: small;
+    }
+    .content{
+        padding: 2rem 3rem;
+    }
+}
